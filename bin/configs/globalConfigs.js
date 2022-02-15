@@ -41,8 +41,12 @@ const config = {
             pass: process.env.SMTP_PASSWORD
         }
     },
-    apiKey: process.env.API_KEY
-    
+    apiKey: process.env.API_KEY,
+    cloudinary: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET
+    }
 }
 
 const store = new confidence.Store(config);

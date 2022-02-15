@@ -1,11 +1,12 @@
 const cloudinary = require('cloudinary').v2;
+const globalConfig = require('../configs/globalConfigs')
 
 
 const init = () => {
     cloudinary.config({ 
-        cloud_name: 'dauxljawn', 
-        api_key: '148952629126864', 
-        api_secret: 'JrSU7nC4XsmmNQOIZ6ZeZ_506OE' 
+        cloud_name: globalConfig.get('/cloudinary').cloudName, 
+        api_key: globalConfig.get('/cloudinary').apiKey, 
+        api_secret: globalConfig.get('/cloudinary').apiSecret 
     });
 }
 
